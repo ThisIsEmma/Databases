@@ -58,10 +58,8 @@
             <h3>Harvest History</h3>
             <ul>
                 {%for harvest in harvests %}
-                    {% if harvest['plant_id'] %}
+                    {% if id == harvest['plant_id'] %}
                         <li>{{harvest['date']}}: harvested {{harvest['quantity']}} {{plant['name']}}</li>
-                    {% else %}
-                        <p>No haverst yet </p>
                     {% endif %} 
                {% endfor %}
             
